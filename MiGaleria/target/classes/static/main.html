@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarjetas</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+<div class="contenedor">
+
+    <header class="header">
+        <h2>Galería</h2>
+
+        <input type="text" id="buscador" placeholder="Buscar tarjeta...">
+        <button onclick="buscar()">Buscar</button>
+
+        <input type="text" id="tituloNueva" placeholder="Título nueva tarjeta">
+        <input type="text" id="textoNueva" placeholder="Descripción">
+        <button onclick="crearTarjeta()">Crear</button>
+
+        <input type="number" id="idBorrar" placeholder="ID a borrar">
+        <button onclick="borrarTarjeta()">Borrar</button>
+
+        <select id="tema" onchange="cambiarTema(this.value)">
+            <option value="claro">Modo claro</option>
+            <option value="oscuro">Modo oscuro</option>
+            <option value="personalizado">Personalizado</option>
+        </select>
+
+        <div id="ventanaFlotanteConfiguracionTema" style="display:none;">
+            <label>Header:</label>
+            <input type="color" id="entradaColorHeader" value="#ffffff">
+            <label>Fondo:</label>
+            <input type="color" id="entradaColorMain" value="#f0f0f0">
+            <label>Footer:</label>
+            <input type="color" id="entradaColorFooter" value="#ffffff">
+            <button onclick="aplicarTemaPersonalizado()">Aplicar</button>
+        </div>
+    </header>
+
+    <main class="galeria" id="galeria"></main>
+
+    <footer class="footer">
+        &copy; Proyecto de Desarrollo Web
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+* {
+margin:0;
+padding:0;
+}
+
+/* estilos generales */
+
+body {
+    margin:0;
+    font-family:Arial;
+}
+
+
+/* estructura principal con grid */
+
+.contenedor {
+    display:grid;
+    height:100vh;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+
+/* parte de arriba */
+
+header {
+    grid-area:header;
+    background-color:white;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* pie de página */
+
+footer {
+    grid-area:footer;
+    background-color:white;
+    text-align:center;
+    padding:10px;
+}
